@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Container, Box, Heading, HStack, Image, Text, Tag } from '@chakra-ui/react';
+import { Container, Box, Heading} from '@chakra-ui/react';
 
 const Category = () => {
   const { title } = useParams<{ title: string }>();
