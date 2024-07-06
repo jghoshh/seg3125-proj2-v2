@@ -22,6 +22,9 @@ const theme = extendTheme({
       }
     },
     Heading: {
+      baseStyle: {
+        letterSpacing: "0.01em",
+      },
       variants: {
         h1: {
           fontSize: baseTheme.fontSizes['7xl'],
@@ -42,7 +45,6 @@ const theme = extendTheme({
           fontSize: baseTheme.fontSizes['2xl'],
           fontWeight: "light",
           lineHeight: '130%',
-          textAlign: 'center',
         },
       },
     },

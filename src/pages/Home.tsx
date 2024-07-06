@@ -15,11 +15,11 @@ const Home = () => {
 
   return (
     <>
-      <Container mb={12} maxW="3xl" centerContent>
+      <Container p={10} mb={12} maxW="3xl" centerContent>
         <Heading variant="h3" mb={7}>Bringing You Real-Time, <Heading variant="h3" as='i'>Unbiased</Heading> Tech Insights</Heading>
         <HStack>
           <Heading w="50%" variant="h1"> See What's Happening Right Now: </Heading>
-          <Box w="50%" position="relative" width="550px" height="300px">
+          <Box w="50%" position="relative" width="550px" height="300px" boxShadow='2xl' >
             <Link to="/your-target-page">
               <Image
                 src="images/main_section_pic.png"
@@ -55,9 +55,9 @@ const Home = () => {
           </Box>
         </HStack>
       </Container>
-      <Divider />
+      <Divider mb={12} />
       <Container mb={12} maxW="3xl" centerContent>
-        <Heading variant="h2" m={7}>Featured Articles</Heading>
+        <Heading variant="h2" mb={7}>Featured Articles</Heading>
         <HStack>
           {featuredArticles.map((article) => (
           <ArticleCard id={article.id} key={`${article.title}+${article.author}`} title={article.title} author={article.author} datePublished={article.datePublished} imageUrl={article.imageUrl} tags={article.tags} />
