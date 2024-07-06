@@ -1,0 +1,126 @@
+[
+  {
+    "id": "1",
+    "title": "Advancements in Machine Learning",
+    "author": "John Doe",
+    "datePublished": "Jul 05 2024",
+    "imageUrl": "/images/example_article1.png",
+    "tags": ["A.I.", "SOFTWARE"],
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt  nibh odio, commodo pretium quam consectetur nec. Cras pulvinar  tincidunt gravida. Pellentesque convallis turpis ac ipsum dapibus, sed  commodo est feugiat. Sed quis velit nibh. Donec viverra libero nulla,  sed suscipit sapien rutrum sed. Nulla tempor condimentum efficitur.  Maecenas elit nisl, congue sit amet vestibulum ut, vestibulum id velit.  In vehicula turpis sit amet venenatis mattis. Nunc aliquam condimentum  aliquam. Mauris nec varius arcu.\n\nMaecenas molestie non urna nec accumsan. Fusce laoreet lacus arcu,  dignissim posuere est imperdiet nec. Sed nisl dui, ornare id fringilla  non, feugiat at erat. Curabitur pulvinar nunc quam, a mattis orci  aliquam eget. Pellentesque nibh mi, commodo et tincidunt eu, scelerisque  ut dui. Donec quis purus laoreet, elementum leo eget, facilisis erat.  Donec consequat fringilla urna, ac rutrum turpis placerat sed. Phasellus  id efficitur nunc, a porttitor magna. Morbi porta in elit non auctor.  Suspendisse potenti. Nam a pharetra magna. Sed tristique eleifend  turpis, eget efficitur quam tempus eget. Pellentesque mattis, quam quis  venenatis ultrices, dui quam finibus mauris, sit amet accumsan ligula  eros eu libero. Aliquam ornare tortor sit amet mi varius semper. Sed sed  dictum ante.\n\nIn maximus, velit vitae volutpat facilisis, justo erat facilisis ex, nec  ullamcorper nunc dolor at nulla. Suspendisse semper mi eget maximus  rutrum. Donec magna nisl, ultricies feugiat egestas at, laoreet et  sapien. Donec pulvinar felis a nunc iaculis ornare. Fusce congue, sapien  sit amet tempor mollis, libero magna dapibus lorem, in condimentum  massa leo eu nunc. Proin posuere nec justo eu tincidunt. Mauris diam  erat, malesuada vel felis non, rutrum sagittis nisi. Proin euismod nunc  eros, vitae consectetur lorem tempus vitae. Quisque id tempus mauris, a  maximus libero.\n\nInteger ullamcorper tortor at lectus vulputate vestibulum. In massa  enim, porta a orci ac, interdum efficitur turpis. Curabitur purus ipsum,  dignissim dapibus mattis nec, placerat a metus. Aenean eros leo,  vehicula et sem et, semper sagittis nisl. Mauris ac orci eget ligula  volutpat dignissim luctus in neque. Donec iaculis nec ex eu accumsan.  Donec ut dictum urna. Phasellus id augue eu dolor ornare suscipit nec  nec nunc. Donec accumsan sem vitae ligula ultrices fringilla. Proin  pellentesque nibh vel cursus feugiat. Curabitur non consectetur enim.  Cras id ligula et lorem rutrum mollis. Curabitur nec lacinia sem, quis  laoreet risus. Fusce nec ipsum eleifend erat eleifend accumsan ut ut  sapien. Phasellus risus nunc, pharetra sed lobortis ut, ullamcorper vel  elit.\n\nProin eu iaculis lectus. Vivamus tristique, quam in suscipit  ullamcorper, enim velit dictum metus, eget lacinia leo enim nec augue.  Etiam at lobortis velit. Cras vitae dolor ut erat tincidunt gravida.  Vivamus consectetur eros nec libero mollis, ac viverra magna aliquam.  Duis molestie nunc a magna dapibus tempor. Donec aliquam, nisl vitae  lacinia luctus, sapien purus pellentesque ex, sed vehicula ante nunc  vitae urna. Morbi vitae enim cursus, malesuada metus id, sodales lacus.  Proin vel elementum mauris, vitae auctor orci. Aenean ultrices, erat nec  efficitur vulputate, quam velit semper odio, in rutrum velit enim in  sapien. Integer dignissim justo elementum convallis tincidunt. Quisque  vel consectetur est. Aenean at tempor sem, non lacinia mi. Lorem ipsum  dolor sit amet, consectetur adipiscing elit. Proin a massa sit amet arcu  volutpat vehicula.",
+    "comments": [
+      {
+        "id": "1",
+        "author": "Alice",
+        "date": "Jul 06 2024",
+        "content": "Great article! I really enjoyed reading it."
+      },
+      {
+        "id": "2",
+        "author": "Bob",
+        "date": "Jul 07 2024",
+        "content": "Very informative. Thanks for sharing!"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "The Future of Quantum Computing",
+    "author": "Jane Smith",
+    "datePublished": "Jun 15 2024",
+    "imageUrl": "/images/example_article2.png",
+    "tags": ["HARDWARE", "SOFTWARE"],
+    "content": "dafsdfasdfasdfasdf",
+    "comments": [
+      {
+        "id": "1",
+        "author": "Alice",
+        "date": "Jul 06 2024",
+        "content": "Great article! I really enjoyed reading it."
+      },
+      {
+        "id": "2",
+        "author": "Bob",
+        "date": "Jul 07 2024",
+        "content": "Very informative. Thanks for sharing!"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Building Resilient Systems with Kubernetes",
+    "author": "Alice Johnson",
+    "datePublished": "May 23 2024",
+    "imageUrl": "/images/example_article3.png",
+    "tags": ["SOFTWARE"],
+    "comments": [
+      {
+        "id": "1",
+        "author": "Alice",
+        "date": "Jul 06 2024",
+        "content": "Great article! I really enjoyed reading it."
+      },
+      {
+        "id": "2",
+        "author": "Bob",
+        "date": "Jul 07 2024",
+        "content": "Very informative. Thanks for sharing!"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "AI in Healthcare: Opportunities and Challenges",
+    "author": "Bob Brown",
+    "datePublished": "Apr 10 2024",
+    "imageUrl": "https://via.placeholder.com/150",
+    "tags": ["A.I.", "SOFTWARE"]
+  },
+  {
+    "id": "5",
+    "title": "Exploring the Latest in Consumer Electronics",
+    "author": "Carol White",
+    "datePublished": "Mar 08 2024",
+    "imageUrl": "https://via.placeholder.com/150",
+    "tags": ["HARDWARE"]
+  },
+  {
+    "id": "6",
+    "title": "The Role of AI in Climate Change Mitigation",
+    "author": "David Green",
+    "datePublished": "Feb 25 2024",
+    "imageUrl": "https://via.placeholder.com/150",
+    "tags": ["A.I."]
+  },
+  {
+    "id": "7",
+    "title": "Innovations in Software Development Practices",
+    "author": "Eve Black",
+    "datePublished": "Jan 12 2024",
+    "imageUrl": "https://via.placeholder.com/150",
+    "tags": ["SOFTWARE"]
+  },
+  {
+    "id": "8",
+    "title": "The Impact of AI on Employment",
+    "author": "Frank Gray",
+    "datePublished": "Dec 19 2023",
+    "imageUrl": "https://via.placeholder.com/150",
+    "tags": ["A.I."]
+  },
+  {
+    "id": "9",
+    "title": "Emerging Trends in Hardware Design",
+    "author": "Grace Blue",
+    "datePublished": "Nov 30 2023",
+    "imageUrl": "https://via.placeholder.com/150",
+    "tags": ["HARDWARE"]
+  },
+  {
+    "id": "10",
+    "title": "Software Solutions for Big Data",
+    "author": "Hank Red",
+    "datePublished": "Oct 17 2023",
+    "imageUrl": "https://via.placeholder.com/150",
+    "tags": ["SOFTWARE"]
+  }
+]
