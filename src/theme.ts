@@ -24,27 +24,22 @@ const theme = extendTheme({
     Heading: {
       baseStyle: {
         letterSpacing: "0.01em",
+        lineHeight: '130%',
+        fontWeight: "light",
       },
       variants: {
         h1: {
           fontSize: baseTheme.fontSizes['7xl'],
-          fontWeight: "light",
-          lineHeight: '130%',
         },
         h2: {
           fontSize: baseTheme.fontSizes['5xl'],
-          fontWeight: "light",
-          lineHeight: '130%',
         },
         h3: {
           fontSize: baseTheme.fontSizes['4xl'],
-          fontWeight: "light",
-          lineHeight: '130%',
         },
         h4: {
           fontSize: baseTheme.fontSizes['2xl'],
-          fontWeight: "light",
-          lineHeight: '130%',
+          lineHeight: "150%"
         },
       },
     },

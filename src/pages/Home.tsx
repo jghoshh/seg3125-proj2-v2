@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Heading, Container, HStack, Box, Image, Divider } from '@chakra-ui/react';
+import { Heading, Container, Box, Image, Divider, SimpleGrid } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import ArticleCard from '../components/ArticleCard';
 import { Article } from '../types';
@@ -10,19 +10,23 @@ const Home = () => {
   useEffect(() => {
     fetch('/data.json')
       .then(response => response.json())
-      .then((data: Article[]) => setFeaturedArticles(data.slice(0, 3)));
+      .then((data: Article[]) => setFeaturedArticles(data.slice(1, 4)));
   }, []);
 
   return (
     <>
-      <Container p={10} mb={12} maxW="3xl" centerContent>
+      <Container p={10} mb={12} maxW="4xl" centerContent>
         <Heading variant="h3" mb={7}>Bringing You Real-Time, <Heading variant="h3" as='i'>Unbiased</Heading> Tech Insights</Heading>
-        <HStack>
-          <Heading w="50%" variant="h1"> See What's Happening Right Now: </Heading>
-          <Box w="50%" position="relative" width="550px" height="300px" boxShadow='2xl' >
-            <Link to="/your-target-page">
+        <SimpleGrid columns={{ sm: 1, md: 10 }} spacing={5}>
+        <Box gridColumn={{ md: "span 4" }}>
+          <Heading w="100%" variant="h1" >
+            See What's Happening Right Now:
+          </Heading>
+        </Box>
+          <Box w="100%" position="relative" boxShadow='2xl' gridColumn={{ md: "span 6" }}>
+            <Link to="/article/1">
               <Image
-                src="images/main_section_pic.png"
+                src="images/netflix_article.png"
                 alt="Example Image"
                 objectFit="cover"
                 width="100%"
@@ -46,23 +50,30 @@ const Home = () => {
                 textAlign="center"
                 color="white"
                 width="85%"
-                variant="h2"
-                textDecor={"underline"}
+                variant="h3"
+                textDecor="underline"
               >
                 Inside Netflix's bet on advanced video encoding
               </Heading>
             </Link>
           </Box>
-        </HStack>
+        </SimpleGrid>
       </Container>
       <Divider mb={12} />
-      <Container mb={12} maxW="3xl" centerContent>
+      <Container mb={12} maxW="5xl" centerContent>
         <Heading variant="h2" mb={7}>Featured Articles</Heading>
-        <HStack>
+        <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing={10}>
           {featuredArticles.map((article) => (
-          <ArticleCard id={article.id} key={`${article.title}+${article.author}`} title={article.title} author={article.author} datePublished={article.datePublished} imageUrl={article.imageUrl} tags={article.tags} />
+          <ArticleCard 
+            id={article.id} 
+            key={`${article.title}+${article.author}`} 
+            title={article.title} 
+            author={article.author}
+            datePublished={article.datePublished} 
+            imageUrl={article.imageUrl} 
+            tags={article.tags} />
           ))}
-        </HStack>
+        </SimpleGrid>
       </Container>
     </>
   )
