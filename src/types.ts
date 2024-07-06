@@ -5,6 +5,7 @@ export interface Article {
   datePublished: string;
   imageUrl: string;
   tags: string[];
+  type: "news" | "opinion" | "review";
   content: string;
   comments: Comment[];
 }

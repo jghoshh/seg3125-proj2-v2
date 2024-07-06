@@ -55,7 +55,7 @@ const theme = extendTheme({
           bg: "black",
           color: "white",
           _hover: {
-            bg: "gray.700",
+            bg: "gray.800",
           },
           _active: {
             bg: "gray.800",
