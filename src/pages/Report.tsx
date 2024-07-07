@@ -7,7 +7,8 @@ import {
   useToast,
   Box, 
   Select,
-  Heading
+  Heading,
+  Text
 } from '@chakra-ui/react';
 import { useState, ChangeEvent, FormEvent } from 'react';
 
@@ -61,7 +62,8 @@ const Report = () => {
   return (
     <Box display="flex" justifyContent="center" alignItems="center" minH="85vh" flexDir="column">
       <Heading variant="h1" mb={4}> Report a Tip </Heading>
-      <Box w="xl" m={5} p={5} borderWidth="1px" borderRadius="lg" boxShadow="2xl">
+      <Text fontSize="xl" mb={4}>Report a tech conference, product launch, key-note address, or more, as it happens and for coverage.</Text>
+      <Box width={["100%", "100%", "md", "xl"]} m={5} p={5} borderWidth="1px" borderRadius="lg" boxShadow="2xl">
         <form onSubmit={handleSubmit}>
           <FormControl isRequired mb={4}>
             <FormLabel htmlFor="eventName">Event Name</FormLabel>
@@ -90,7 +92,7 @@ const Report = () => {
             <Textarea id="description" name="description" value={eventData.description} onChange={handleChange} />
           </FormControl>
           <Box display="flex" justifyContent="flex-end" mb={4} >
-            <Button variant="solid" type="submit">Submit Tip</Button>
+            <Button type="submit">Submit Tip</Button>
           </Box>
         </form>
       </Box>

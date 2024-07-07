@@ -3,14 +3,15 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <Box py="10" >
+    <Box py={10} >
       <Container maxW="7xl">
-        <Stack direction={{ base: 'column', md: 'row' }} spacing="4" justify="space-between" align="center">
+        <Stack direction={{ base: 'column', md: 'row' }} spacing={4} justify="space-between" align="center">
           <Link to="/">
             <Heading size="xl" fontWeight="light">VERITAS</Heading>
           </Link>
-          <Stack direction="row" spacing="10">
+          <Stack direction="row" spacing={10}>
             <ChakraLink as={Link} to="/report">REPORT A TIP</ChakraLink>
+            <ChakraLink as={Link} to="/create">CREATE AN ARTICLE</ChakraLink>
           </Stack>
         </Stack>
       </Container>

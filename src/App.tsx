@@ -6,6 +6,7 @@ import Article from './pages/Article';
 import Category from './pages/Category';
 import Explore from './pages/Explore';
 import Report from './pages/Report';
+import Create from './pages/Create';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/category/:title" element={<Category />} />
           <Route path="/explore" element={<Explore />} />
           <Route path="/report" element={<Report />} />
+          <Route path="/create" element={<Create />} />
         </Routes>
       <Footer />
     </Router>
