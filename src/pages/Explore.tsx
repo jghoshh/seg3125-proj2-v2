@@ -54,6 +54,7 @@ const Explore = () => {
       return dateFilter && categoryFilter && articleTypeFilter;
     });
     setFilteredArticles(filteredArticles);
+    setIsOpen(false);
   };
 
   return (
