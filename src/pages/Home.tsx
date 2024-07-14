@@ -3,8 +3,12 @@ import { Heading, Container, Box, Image, Divider, SimpleGrid } from '@chakra-ui/
 import { Link } from 'react-router-dom';
 import ArticleCard from '../components/ArticleCard';
 import { Article } from '../types';
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
+
+  const { t } = useTranslation();
+
   const [featuredArticles, setFeaturedArticles] = useState<Article[]>([]);
 
   useEffect(() => {
@@ -16,11 +20,11 @@ const Home = () => {
   return (
     <>
       <Container as="section" p={10} mb={12} maxW="4xl" centerContent>
-        <Heading as="h1" variant="h3" mb={7}>Bringing You Real-Time, Unbiased Tech Insights</Heading>
+        <Heading as="h1" variant="h3" mb={7} textAlign="center">{t('sub-tagline')}</Heading>
         <SimpleGrid columns={{ sm: 1, md: 10 }} spacing={5}>
         <Box gridColumn={{ md: "span 4" }}>
           <Heading as="h2" w="100%" variant="h1" >
-            See What's Happening Right Now:
+            {t('main-tagline')}:
           </Heading>
         </Box>
           <Box as="section" w="100%" position="relative" boxShadow='2xl' gridColumn={{ md: "span 6" }}>
