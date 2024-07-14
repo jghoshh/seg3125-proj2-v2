@@ -4,7 +4,7 @@ import { Globe } from 'react-bootstrap-icons';
 import { useTranslation } from 'react-i18next';
 
 const Header = () => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const changeLanguage = (event: React.ChangeEvent<HTMLSelectElement>) => {
     i18n.changeLanguage(event.target.value);
@@ -17,11 +17,11 @@ const Header = () => {
           <Heading as="h2" size="xl" fontWeight="light">VERITAS</Heading>
         </Link>
         <HStack as="nav" aria-label="Main navigation" spacing={9}>
-          <ChakraLink as={Link} to="/category/A.I." aria-label="A.I. category">A.I.</ChakraLink>
-          <ChakraLink as={Link} to="/category/software" aria-label="Software category">SOFTWARE</ChakraLink>
-          <ChakraLink as={Link} to="/category/hardware" aria-label="Hardware category">HARDWARE</ChakraLink>
-          <ChakraLink as={Link} to="/category/science" aria-label="Science category">SCIENCE</ChakraLink>
-          <ChakraLink as={Link} to="/explore" aria-label="All articles">ALL ARTICLES</ChakraLink>
+          <ChakraLink as={Link} to="/category/A.I." aria-label="A.I. category">{t('nav.first')}</ChakraLink>
+          <ChakraLink as={Link} to="/category/software" aria-label="Software category">{t('nav.second')}</ChakraLink>
+          <ChakraLink as={Link} to="/category/hardware" aria-label="Hardware category">{t('nav.third')}</ChakraLink>
+          <ChakraLink as={Link} to="/category/science" aria-label="Science category">{t('nav.fourth')}</ChakraLink>
+          <ChakraLink as={Link} to="/explore" aria-label="All articles">{t('nav.fifth')}</ChakraLink>
           <FormControl id="language-selector" width="170px">
             <VisuallyHidden as={FormLabel} htmlFor="language">
               Select Language

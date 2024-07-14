@@ -1,4 +1,22 @@
 {
-  "main-tagline": "Voyez ce qui se passe en ce moment",
-  "sub-tagline": "Des analyses tech impartiales en temps réel"
+  "main-header-tagline": "Voyez ce qui se passe en ce moment",
+  "sub-header-tagline": "Des analyses tech impartiales en temps réel",
+  "nav": {
+    "first": "I.A.",
+    "second": "LOGICIEL",
+    "third": "MATÉRIEL",
+    "fourth": "SCIENCE",
+    "fifth": "TOUS LES ARTICLES"
+  },
+  "main-article-tagline": "L'engagement de Netflix envers le codage vidéo avancé",
+  "featured-articles-header": "Articles à la une",
+  "footer": {
+    "first": "À PROPOS DE NOUS",
+    "second": "SIGNALER UN CONSEIL",
+    "third": "CRÉER UN ARTICLE"
+  },
+  "article-card": {
+    "by": "Par",
+    "published": "Publié"
+  }
 }

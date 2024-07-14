@@ -2,29 +2,37 @@ import { useEffect, useState } from 'react';
 import { Heading, Container, Box, Image, Divider, SimpleGrid } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import ArticleCard from '../components/ArticleCard';
-import { Article } from '../types';
+import { Article, TranslatedContent, TranslatedArticle } from '../types';
 import { useTranslation } from 'react-i18next';
 
 const Home = () => {
 
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const [featuredArticles, setFeaturedArticles] = useState<Article[]>([]);
 
   useEffect(() => {
-    fetch('/data.json')
+    fetch('/data2.json')
       .then(response => response.json())
-      .then((data: Article[]) => setFeaturedArticles(data.slice(1, 4)));
-  }, []);
+      .then((data: TranslatedArticle[]) => {
+        const translatedArticles = data.map(article => ({
+          ...article,
+          title: article.title[i18n.language as keyof TranslatedContent],
+          content: article.content[i18n.language as keyof TranslatedContent],
+          tags: article.tags.map(tag => tag[i18n.language as keyof TranslatedContent]),
+        }));
+        setFeaturedArticles(translatedArticles.slice(0, 3) as Article[]);
+      });
+  }, [i18n.language]);
 
   return (
     <>
       <Container as="section" p={10} mb={12} maxW="4xl" centerContent>
-        <Heading as="h1" variant="h3" mb={7} textAlign="center">{t('sub-tagline')}</Heading>
+        <Heading as="h1" variant="h3" mb={7} textAlign="center">{t('sub-header-tagline')}</Heading>
         <SimpleGrid columns={{ sm: 1, md: 10 }} spacing={5}>
         <Box gridColumn={{ md: "span 4" }}>
           <Heading as="h2" w="100%" variant="h1" >
-            {t('main-tagline')}:
+            {t('main-header-tagline')}:
           </Heading>
         </Box>
           <Box as="section" w="100%" position="relative" boxShadow='2xl' gridColumn={{ md: "span 6" }}>
@@ -60,15 +68,15 @@ const Home = () => {
                 variant="h3"
                 textDecor="underline"
               >
-                Inside Netflix's bet on advanced video encoding
+                {t('main-article-tagline')}
               </Heading>
             </Link>
           </Box>
         </SimpleGrid>
       </Container>
       <Divider mb={12} />
-      <Container as="section" mb={12} maxW="5xl" centerContent aria-labelledby="featured-articles-header">
-        <Heading id="featured-articles-header" as="h2" variant="h2" mb={7}>Featured Articles</Heading>
+      <Container as="section" mb={12} maxW="6xl" centerContent aria-labelledby="featured-articles-header">
+        <Heading id="featured-articles-header" as="h2" variant="h2" mb={7}>{t('featured-articles-header')}</Heading>
         <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing={10}>
           {featuredArticles.map((article) => (
           <ArticleCard 

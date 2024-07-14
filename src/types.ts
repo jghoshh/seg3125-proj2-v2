@@ -15,3 +15,14 @@ export interface Comment {
   content: string;
   author: string;
 }
+
+export interface TranslatedContent {
+  en: string;
+  fr: string;
+}
+
+export interface TranslatedArticle extends Omit<Article, 'title' | 'content' | 'tags'> {
+  title: TranslatedContent;
+  content: TranslatedContent;
+  tags: TranslatedContent[];
+}

@@ -1,4 +1,22 @@
 {
-  "main-tagline": "See what's happening right now",
-  "sub-tagline": "Bringing You Real-Time, Unbiased Tech Insights",
+  "main-header-tagline": "See what's happening right now",
+  "sub-header-tagline": "Bringing You Real-Time, Unbiased Tech Insights",
+  "nav": {
+    "first": "A.I.",
+    "second": "SOFTWARE",
+    "third": "HARDWARE",
+    "fourth": "SCIENCE",
+    "fifth": "ALL ARTICLES"
+  },
+  "main-article-tagline": "Inside Netflix's bet on Advanced Video Encoding",
+  "featured-articles-header": "Featured Articles",
+  "footer": {
+    "first": "ABOUT US",
+    "second": "REPORT A TIP",
+    "third": "CREATE AN ARTICLE"
+  },
+  "article-card": {
+    "by": "By",
+    "published": "Published"
+  }
 }
