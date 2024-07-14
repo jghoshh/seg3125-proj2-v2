@@ -7,6 +7,7 @@ import Category from './pages/Category';
 import Explore from './pages/Explore';
 import Report from './pages/Report';
 import Create from './pages/Create';
+import AboutUs from './pages/AboutUs';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/explore" element={<Explore />} />
           <Route path="/report" element={<Report />} />
           <Route path="/create" element={<Create />} />
+          <Route path="/about-us" element={<AboutUs />} />
         </Routes>
       <Footer />
     </Router>
