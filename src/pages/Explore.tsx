@@ -78,7 +78,7 @@ const Explore = () => {
         mb={12}
       >
         <Heading textAlign="center" color="white" variant="h1">
-          All of tech, in one place.
+          All Articles
         </Heading>
       </Box>
       <Box

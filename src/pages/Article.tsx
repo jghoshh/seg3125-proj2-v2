@@ -57,7 +57,7 @@ const ArticlePage = () => {
           left="50%"
           transform="translate(-50%, -50%)"
         >
-          <Heading textAlign="center" color="white" variant="h1">
+          <Heading textAlign="center" color="white" variant="h2">
             {article.title}
           </Heading>
           <Heading color="white" textAlign="center" variant="h4">
