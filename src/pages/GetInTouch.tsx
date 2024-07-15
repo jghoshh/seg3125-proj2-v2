@@ -6,7 +6,7 @@ const GetInTouch = () => {
       <Heading variant="h1" mb={4}>Get in Touch</Heading>
       <Heading variant="h3">
         Send us an email at: 
-        <Link href="mailto:hello@veritas.com" isExternal ml={1} sx={{letterSpacing: "0em"}}>
+        <Link href="mailto:hello@veritas.com" isExternal ml={1} sx={{letterSpacing: "inherit"}}>
           hello@veritas.com
         </Link>
       </Heading>
