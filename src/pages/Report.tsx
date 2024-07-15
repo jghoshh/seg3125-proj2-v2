@@ -67,7 +67,7 @@ const Report = () => {
         <form onSubmit={handleSubmit}>
           <FormControl isRequired mb={4}>
             <FormLabel htmlFor="eventName">Event Name</FormLabel>
-            <Input id="eventName" name="eventName" value={eventData.eventName} onChange={handleChange} />
+            <Input id="eventName" name="eventName" value={eventData.eventName} onChange={handleChange} placeholder="Write the name of the event that took place..."/>
           </FormControl>
           <FormControl isRequired mb={4}>
             <FormLabel htmlFor="eventDate">Event Date</FormLabel>
@@ -75,7 +75,7 @@ const Report = () => {
           </FormControl>
           <FormControl isRequired mb={4}>
             <FormLabel htmlFor="eventLocation">Event Location</FormLabel>
-            <Input id="eventLocation" name="eventLocation" value={eventData.eventLocation} onChange={handleChange} />
+            <Input id="eventLocation" name="eventLocation" value={eventData.eventLocation} onChange={handleChange} placeholder="Write about where this event is going to take place..."/>
           </FormControl>
           <FormControl isRequired mb={4}>
             <FormLabel htmlFor="eventType">Event Type</FormLabel>
@@ -88,8 +88,8 @@ const Report = () => {
             </Select>
           </FormControl>
           <FormControl mb={4}>
-            <FormLabel htmlFor="description">Description</FormLabel>
-            <Textarea id="description" name="description" value={eventData.description} onChange={handleChange} />
+            <FormLabel htmlFor="description">Event Description</FormLabel>
+            <Textarea id="description" name="description" value={eventData.description} onChange={handleChange} rows={10} placeholder="Describe the event that will take place. For example, for a Tech Keynote, describe to the best of your knowledge, what products/topics will be covered and who will be there..." />
           </FormControl>
           <Box display="flex" justifyContent="flex-end" mb={4} >
             <Button type="submit">Submit Tip</Button>

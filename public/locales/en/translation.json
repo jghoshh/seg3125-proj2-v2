@@ -13,7 +13,8 @@
   "footer": {
     "first": "ABOUT US",
     "second": "REPORT A TIP",
-    "third": "CREATE AN ARTICLE"
+    "third": "CREATE AN ARTICLE",
+    "fourth": "GET IN TOUCH"
   },
   "article-card": {
     "by": "By",

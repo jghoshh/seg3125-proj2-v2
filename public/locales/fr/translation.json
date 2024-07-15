@@ -13,7 +13,8 @@
   "footer": {
     "first": "À PROPOS DE NOUS",
     "second": "SIGNALER UN CONSEIL",
-    "third": "CRÉER UN ARTICLE"
+    "third": "CRÉER UN ARTICLE",
+    "fourth": "NOUS CONTACTER"
   },
   "article-card": {
     "by": "Par",

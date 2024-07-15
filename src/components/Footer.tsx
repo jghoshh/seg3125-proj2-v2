@@ -16,6 +16,7 @@ const Footer = () => {
             <ChakraLink as={Link} to="/about-us" aria-label="About Us">{t('footer.first')}</ChakraLink>
             <ChakraLink as={Link} to="/report" aria-label="Report a Tip">{t('footer.second')}</ChakraLink>
             <ChakraLink as={Link} to="/create" aria-label="Create an Article">{t('footer.third')}</ChakraLink>
+            <ChakraLink as={Link} to="/get-in-touch" aria-label="Get in touch">{t('footer.fourth')}</ChakraLink>
           </Stack>
         </Stack>
       </Container>

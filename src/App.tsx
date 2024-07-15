@@ -8,6 +8,7 @@ import Explore from './pages/Explore';
 import Report from './pages/Report';
 import Create from './pages/Create';
 import AboutUs from './pages/AboutUs';
+import GetInTouch from './pages/GetInTouch';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/report" element={<Report />} />
           <Route path="/create" element={<Create />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/get-in-touch" element={<GetInTouch />} />
         </Routes>
       <Footer />
     </Router>
