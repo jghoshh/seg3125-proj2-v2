@@ -1,16 +1,16 @@
-import {   
+import {
   FormControl,
   FormLabel,
   Input,
   Textarea,
   Button,
   useToast,
-  Box, 
+  Box,
   Select,
   Heading,
-  Text
-} from '@chakra-ui/react';
-import { useState, ChangeEvent, FormEvent } from 'react';
+  Text,
+} from "@chakra-ui/react";
+import { useState, ChangeEvent, FormEvent } from "react";
 
 interface EventData {
   eventName: string;
@@ -22,20 +22,22 @@ interface EventData {
 
 const Report = () => {
   const [eventData, setEventData] = useState<EventData>({
-    eventName: '',
-    eventDate: '',
-    eventLocation: '',
-    eventType: '',
-    description: ''
+    eventName: "",
+    eventDate: "",
+    eventLocation: "",
+    eventType: "",
+    description: "",
   });
 
   const toast = useToast();
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setEventData(prevState => ({
+    setEventData((prevState) => ({
       ...prevState,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -51,35 +53,78 @@ const Report = () => {
     });
 
     setEventData({
-      eventName: '',
-      eventDate: '',
-      eventLocation: '',
-      eventType: '',
-      description: ''
+      eventName: "",
+      eventDate: "",
+      eventLocation: "",
+      eventType: "",
+      description: "",
     });
   };
 
   return (
-    <Box display="flex" justifyContent="center" alignItems="center" minH="85vh" flexDir="column">
-      <Heading variant="h1" mb={4}> Report a Tip </Heading>
-      <Text fontSize="xl" mb={4}>Report a tech conference, product launch, key-note address, or more, as it happens and for coverage.</Text>
-      <Box width={["100%", "100%", "md", "xl"]} m={5} p={5} borderWidth="1px" borderRadius="lg" boxShadow="2xl">
+    <Box
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      minH="85vh"
+      flexDir="column"
+    >
+      <Heading variant="h1" mb={4}>
+        {" "}
+        Report a Tip{" "}
+      </Heading>
+      <Text fontSize="xl" mb={4}>
+        Report a tech conference, product launch, key-note address, or more, as
+        it happens and for coverage.
+      </Text>
+      <Box
+        width={["100%", "100%", "md", "xl"]}
+        m={5}
+        p={5}
+        borderWidth="1px"
+        borderRadius="lg"
+        boxShadow="2xl"
+      >
         <form onSubmit={handleSubmit}>
           <FormControl isRequired mb={4}>
             <FormLabel htmlFor="eventName">Event Name</FormLabel>
-            <Input id="eventName" name="eventName" value={eventData.eventName} onChange={handleChange} placeholder="Write the name of the event that took place..."/>
+            <Input
+              id="eventName"
+              name="eventName"
+              value={eventData.eventName}
+              onChange={handleChange}
+              placeholder="Write the name of the event that took place..."
+            />
           </FormControl>
           <FormControl isRequired mb={4}>
             <FormLabel htmlFor="eventDate">Event Date</FormLabel>
-            <Input type="date" id="eventDate" name="eventDate" value={eventData.eventDate} onChange={handleChange} />
+            <Input
+              type="date"
+              id="eventDate"
+              name="eventDate"
+              value={eventData.eventDate}
+              onChange={handleChange}
+            />
           </FormControl>
           <FormControl isRequired mb={4}>
             <FormLabel htmlFor="eventLocation">Event Location</FormLabel>
-            <Input id="eventLocation" name="eventLocation" value={eventData.eventLocation} onChange={handleChange} placeholder="Write about where this event is going to take place..."/>
+            <Input
+              id="eventLocation"
+              name="eventLocation"
+              value={eventData.eventLocation}
+              onChange={handleChange}
+              placeholder="Write about where this event is going to take place..."
+            />
           </FormControl>
           <FormControl isRequired mb={4}>
             <FormLabel htmlFor="eventType">Event Type</FormLabel>
-            <Select id="eventType" name="eventType" value={eventData.eventType} onChange={handleChange} placeholder="Select event type">
+            <Select
+              id="eventType"
+              name="eventType"
+              value={eventData.eventType}
+              onChange={handleChange}
+              placeholder="Select event type"
+            >
               <option value="tech-conference">Tech Conference</option>
               <option value="product-launch">Product Launch</option>
               <option value="keynote-address">Keynote Address</option>
@@ -89,15 +134,22 @@ const Report = () => {
           </FormControl>
           <FormControl mb={4}>
             <FormLabel htmlFor="description">Event Description</FormLabel>
-            <Textarea id="description" name="description" value={eventData.description} onChange={handleChange} rows={10} placeholder="Describe the event that will take place. For example, for a Tech Keynote, describe to the best of your knowledge, what products/topics will be covered and who will be there..." />
+            <Textarea
+              id="description"
+              name="description"
+              value={eventData.description}
+              onChange={handleChange}
+              rows={10}
+              placeholder="Describe the event that will take place. For example, for a Tech Keynote, describe to the best of your knowledge, what products/topics will be covered and who will be there..."
+            />
           </FormControl>
-          <Box display="flex" justifyContent="flex-end" mb={4} >
+          <Box display="flex" justifyContent="flex-end" mb={4}>
             <Button type="submit">Submit Tip</Button>
           </Box>
         </form>
       </Box>
     </Box>
   );
-}
+};
 
 export default Report;
