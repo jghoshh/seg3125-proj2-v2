@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Container,
   VStack,
@@ -7,7 +8,6 @@ import {
   Icon,
   FormControl,
   FormLabel,
-  Select,
   VisuallyHidden,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
@@ -16,9 +16,16 @@ import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const { t, i18n } = useTranslation();
+  const [language, setLanguage] = useState(i18n.language);
 
-  const changeLanguage = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    i18n.changeLanguage(event.target.value);
+  const toggleLanguage = () => {
+    const newLanguage = language === "en" ? "fr" : "en";
+    setLanguage(newLanguage);
+    i18n.changeLanguage(newLanguage);
+  };
+
+  const getLanguageLabel = () => {
+    return language === "en" ? "FRANÇAIS" : "ENGLISH";
   };
 
   return (
@@ -57,21 +64,22 @@ const Header = () => {
           <ChakraLink as={Link} to="/explore" aria-label="All articles">
             {t("nav.fifth")}
           </ChakraLink>
-          <FormControl id="language-selector" width="170px">
+          <FormControl id="language-selector" width="150px">
             <VisuallyHidden as={FormLabel} htmlFor="language">
               Select Language
             </VisuallyHidden>
             <HStack>
-              <Icon as={Globe} w={6} h={6} mr={2} aria-hidden="true" />
-              <Select
-                id="language"
-                sx={{ letterSpacing: "widest", fontWeight: "bold" }}
-                size="sm"
-                onChange={changeLanguage}
+              <ChakraLink
+                id="language-toggle"
+                display="flex"
+                alignItems="center"
+                cursor="pointer"
+                onClick={toggleLanguage}
+                aria-label={`Switch to ${getLanguageLabel()}`}
               >
-                <option value="en">ENGLISH</option>
-                <option value="fr">FRANÇAIS</option>
-              </Select>
+                <Icon as={Globe} w={6} h={6} mr={2} aria-hidden="true" />
+                {getLanguageLabel()}
+              </ChakraLink>
             </HStack>
           </FormControl>
         </HStack>
